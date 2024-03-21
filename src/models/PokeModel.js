@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const pokeSchema = new mongoose.Schema({
-  poke_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    unique: true
-  },
   poked_user_id: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
