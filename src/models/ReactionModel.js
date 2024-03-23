@@ -15,7 +15,8 @@ const reactionSchema = new mongoose.Schema({
     required: true,
     ref: 'Post' 
   }
-});
+}, {timestamps: true, versionKey: false});
+
 const ReactionModel = mongoose.model('Reaction', reactionSchema);
 
 module.exports = ReactionModel;

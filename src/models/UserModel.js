@@ -27,8 +27,7 @@ const userSchema = new mongoose.Schema(
       enum: ["active", "inactive", "pending"],
       default: "pending",
     },
-  },
-  { timestamps: true }
+  }, {timestamps: true, versionKey: false}
 );
 
 const UserModel = mongoose.model("User", userSchema);

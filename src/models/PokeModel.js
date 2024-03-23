@@ -10,7 +10,7 @@ const pokeSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   }
-});
+}, {timestamps: true, versionKey: false});
 
 const PokeModel = mongoose.model('Poke', pokeSchema);
 

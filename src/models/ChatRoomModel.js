@@ -16,7 +16,7 @@ const chatRoomSchema = new mongoose.Schema({
     required: true,
     ref: 'User'
   }
-});
+}, {timestamps: true, versionKey: false});
 
 const ChatRoomModel = mongoose.model('ChatRoom', chatRoomSchema);
 

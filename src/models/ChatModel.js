@@ -5,7 +5,7 @@ const chatSchema = new mongoose.Schema({
     type: String,
     required: true
   }
-});
+}, {timestamps: true, versionKey: false});
 
 const ChatModel = mongoose.model('Chat', chatSchema);
 

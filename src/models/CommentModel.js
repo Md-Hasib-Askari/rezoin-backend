@@ -15,7 +15,7 @@ const commentSchema = new mongoose.Schema({
     required: true,
     ref: 'User' 
   }
-});
+}, {timestamps: true, versionKey: false});
 
 const CommentModel = mongoose.model('Comment', commentSchema);
 
