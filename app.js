@@ -18,7 +18,7 @@ app.use(xssClean());
 
 mongoose.connect(MONGODB_CONNECTION,
     {useNewUrlParser: true, useUnifiedTopology: true})
-    .then(r => console.log(r));
+    .then( console.log("MongoDB Connected"));
 
 app.use('/api/v1', router);
 
