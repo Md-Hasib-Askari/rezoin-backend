@@ -52,6 +52,7 @@ exports.userLogin = async (req, res) => {
 
     // Matches the correct user and password
     const user = await UserModel.findOne({ email });
+    const user_id = user._id.toString();
     if (!user) {
       return res.status(401).json({ status: "error", message: "Invalid User" });
     } else {
@@ -63,11 +64,12 @@ exports.userLogin = async (req, res) => {
       }
 
       // Generate JWT token using the secret key
-      const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: "1h" });
+      const token = jwt.sign({ email, user_id }, JWT_SECRET, { expiresIn: "1h" });
 
       // Set token and email in cookies
       res.cookie("token", token, { httpOnly: true });
       res.cookie("email", email, { httpOnly: true });
+      res.cookie("user_id", user_id, { httpOnly: true });
       res
         .status(200)
         .json({
