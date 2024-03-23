@@ -16,7 +16,6 @@ module.exports = (req, res, next) => {
     } else {
       req.headers.email = decoded["email"];
       req.headers.user_id = decoded["user_id"];
-      console.log(req.headers);
       next();
     }
   });
