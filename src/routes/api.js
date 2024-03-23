@@ -12,11 +12,11 @@ router.put('/updateUser/:user_id', AuthVerify, UserController.updateUserProfile)
 router.delete('/deleteUser/:user_id', AuthVerify, UserController.deleteUser);
 
 //Post
-router.post('/createPost', AuthVerify, PostController.createPost);
-router.get('/getPost/:post_id', AuthVerify, PostController.getPost);
-router.get('/getAllPosts', AuthVerify, PostController.getAllPosts);
-router.put('/updatePost/:post_id', AuthVerify, PostController.updatePost);
-router.delete('/deletePost/:post_id', AuthVerify, PostController.deletePost);
+router.post('/posts', AuthVerify, PostController.createPost);
+router.get('/posts/:post_id', AuthVerify, PostController.getPost);
+router.get('/posts', AuthVerify, PostController.getAllPosts);
+router.put('/posts/:post_id', AuthVerify, PostController.updatePost);
+router.delete('/posts/:post_id', AuthVerify, PostController.deletePost);
 
 
 module.exports = router;
