@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const reactionSchema = new mongoose.Schema({
-  count: {
-    type: Number,
-    default: 0
+  isLiked: {
+    type: Boolean,
+    default: false,
+    required: true
   },
   user_id: {
     type: mongoose.Schema.Types.ObjectId,

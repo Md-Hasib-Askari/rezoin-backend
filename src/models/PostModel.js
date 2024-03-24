@@ -5,6 +5,16 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  reactionCount: {
+    type: Number,
+    default: 0,
+    required: true
+  },
+  commentCount: {
+      type: Number,
+      default: 0,
+      required: true
+  },
   author_id: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,

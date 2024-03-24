@@ -47,9 +47,8 @@ const getAllPosts = async (req, res) => {
 const updatePost = async (req, res) => {
     const post_id = req.params.post_id;
     const user_id = req.headers.user_id;
-    const { content } = req.body;
     try {
-        const post = await PostModel.findByIdAndUpdate({_id: post_id, author_id: user_id}, {content}, {new: true});
+        const post = await PostModel.findByIdAndUpdate({_id: post_id, author_id: user_id}, req.body, {new: true});
         if (!post) {
             return res.status(404).json({status: "error", message: "Post not found"});
         }
