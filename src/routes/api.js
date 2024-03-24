@@ -7,9 +7,9 @@ const AuthVerify =  require("../Middlewares/AuthVerify");
 //User
 router.post('/register', UserController.register);
 router.post('/login', UserController.userLogin);
-router.get('/getUser/:user_id', AuthVerify, UserController.getUserDetails);
-router.put('/updateUser/:user_id', AuthVerify, UserController.updateUserProfile);
-router.delete('/deleteUser/:user_id', AuthVerify, UserController.deleteUser);
+router.get('/users/:user_id', AuthVerify, UserController.getUserDetails);
+router.put('/users/:user_id', AuthVerify, UserController.updateUserProfile);
+router.delete('/users/:user_id', AuthVerify, UserController.deleteUser);
 
 //Post
 router.post('/posts', AuthVerify, PostController.createPost);
