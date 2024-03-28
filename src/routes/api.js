@@ -5,6 +5,7 @@ const PostController = require("../controllers/PostController");
 const ReactionController = require("../controllers/ReactionController");
 const CommentController = require("../controllers/CommentController");
 const AuthVerify =  require("../Middlewares/AuthVerify");
+const PokeController = require("../controllers/PokeController");
 
 //User
 router.post('/register', UserController.register);
@@ -34,6 +35,7 @@ router.get('/comments', AuthVerify, CommentController.getAllComments);
 router.put('/comments/:comment_id', AuthVerify, CommentController.updateComment);
 router.delete('/comments/:comment_id', AuthVerify, CommentController.deleteComment);
 
-
+//Pokapoki
+router.post('/poke', PokeController.pokeUser);
 
 module.exports = router;

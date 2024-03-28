@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const UserModel = require("../models/UserModel");
-const { decodeToken } = require("../Middlewares/AuthVerify");
 
 const { JWT_SECRET } = require("../../config");
 const { SALT_ROUNDS } = require("../../config");
