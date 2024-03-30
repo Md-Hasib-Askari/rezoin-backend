@@ -1,5 +1,5 @@
 module.exports = {
-    MONGODB_CONNECTION: "mongodb+srv://rnadoha:oAwZCsQ0r25eRlE7@final.pgrmvz5.mongodb.net/rezoin",
+    MONGODB_CONNECTION: "mongodb://localhost:27017/Rezoin",
     RUNNING_PORT: 5000,
 
     JWT_SECRET: "secret",
